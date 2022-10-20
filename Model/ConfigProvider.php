@@ -224,7 +224,7 @@ class ConfigProvider implements ConfigProviderInterface
             $this->scopeConfig->getValue(
                 'payment/iways_paypalplus_payment/third_party_moduls',
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-            )
+            ) ?? ''
         );
         $methods = [];
         foreach ($paymentMethods as $paymentMethod) {
